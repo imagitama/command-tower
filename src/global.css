@@ -4,6 +4,11 @@ body {
   text-shadow: black 1px 1px 1px;
   color: white;
   background-image: url(./assets/command_tower_bg.jpg);
-  background-size: cover;
+  background-size: auto 100%;
   background-color: black;
+  background-repeat: no-repeat;
+}
+
+html {
+  height: 100%;
 }

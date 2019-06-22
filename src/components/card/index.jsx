@@ -1,8 +1,15 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
 
-const Card = ({ scryfallCardId, cardName, cardImageUrl, rating, reasons }) => (
-  <Grid container data-scryfallCardId={scryfallCardId}>
+const Card = ({
+  scryfallCardId,
+  cardName,
+  cardImageUrl,
+  rating,
+  reasons,
+  id
+}) => (
+  <Grid container data-id={id} data-scryfall-card-id={scryfallCardId}>
     <Grid item>
       <Grid
         container

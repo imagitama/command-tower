@@ -8,7 +8,8 @@ const HomeContainer = ({ searchTerm }) => {
   const [isLoading, isErrored, records] = useDatabase(
     'ratings',
     null,
-    searchTerm
+    searchTerm,
+    'rating'
   )
 
   console.log('results', records)
@@ -18,7 +19,9 @@ const HomeContainer = ({ searchTerm }) => {
       <Searchbar />
       {isLoading && <span>Loading...</span>}
       {isErrored && <span>Error!</span>}
-      {records.length ? <Cards cards={records} /> : <span>No results</span>}
+      {!isErrored &&
+        !isLoading &&
+        (records.length ? <Cards cards={records} /> : <span>No results</span>)}
     </div>
   )
 }
