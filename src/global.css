@@ -1,0 +1,9 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 2rem;
+  text-shadow: black 1px 1px 1px;
+  color: white;
+  background-image: url(./assets/command_tower_bg.jpg);
+  background-size: cover;
+  background-color: black;
+}
